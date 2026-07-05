@@ -399,8 +399,9 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
 
 /* ─── RESPONSIVE: TABLET (≤1024px) ─── */
 @media (max-width: 1024px) {
-  /* Multi-column grids → 2 cols */
-  section[style*="grid-template-columns:repeat(4"] {
+  /* Multi-column grids → 2 cols (both section and div) */
+  section[style*="grid-template-columns:repeat(4"],
+  div[style*="grid-template-columns:repeat(4"] {
     grid-template-columns: repeat(2, 1fr) !important;
   }
   div[style*="grid-template-columns:repeat(5"],
@@ -412,10 +413,16 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   section[style*="grid-template-columns:1.05fr"] {
     gap: 32px !important;
   }
+  /* Fractional 2-col layouts (div) → tighter gap */
+  div[style*="grid-template-columns:0.9fr"],
+  div[style*="grid-template-columns:0.85fr"] {
+    gap: 32px !important;
+  }
   /* Pricing tier cards */
   div[style*="grid-template-columns:repeat(3,1fr)"][style*="align-items:stretch"] {
     grid-template-columns: 1fr !important;
     max-width: 480px;
+    margin: 0 auto !important;
   }
   /* Reduce section padding */
   section[style*="padding:80px 32px"],
@@ -440,6 +447,10 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
     font-size: 38px !important;
     line-height: 44px !important;
   }
+  /* Large counter/stat numbers */
+  div[style*="font-size:52px"] {
+    font-size: 40px !important;
+  }
 }
 
 /* ─── RESPONSIVE: TABLET PORTRAIT (≤768px) ─── */
@@ -451,6 +462,8 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   section[style*="grid-template-columns:0.85fr"],
   section[style*="grid-template-columns:1fr 1fr"],
   div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns:0.9fr"],
+  div[style*="grid-template-columns:0.85fr"],
   div[style*="grid-template-columns:1.4fr"],
   div[style*="grid-template-columns:repeat(2"],
   div[style*="grid-template-columns:repeat(3"],
@@ -459,6 +472,12 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   div[style*="grid-template-columns:repeat(6"],
   ol[style*="grid-template-columns:repeat(5"] {
     grid-template-columns: 1fr !important;
+  }
+  /* Stats/counter grids keep 2-col on tablet for compact display */
+  div[style*="grid-template-columns:repeat(6,1fr)"][style*="gap:28px"],
+  div[style*="grid-template-columns:repeat(3,1fr)"][style*="gap:36px"],
+  div[style*="grid-template-columns:repeat(3,1fr)"][style*="gap:28px"] {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
   /* Step cards (Program page) */
   [data-step-card] {
@@ -520,14 +539,24 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
     line-height: 28px !important;
   }
   /* Stat counters */
+  div[style*="font-size:52px"] {
+    font-size: 36px !important;
+  }
   div[style*="font-size:48px"][style*="font-weight:800"] {
     font-size: 36px !important;
+  }
+  div[style*="font-size:44px"][style*="font-weight:800"] {
+    font-size: 34px !important;
   }
   div[style*="font-size:64px"] {
     font-size: 44px !important;
   }
   span[style*="font-size:72px"] {
     font-size: 48px !important;
+  }
+  /* Large non-heading text (40px counters, stats) */
+  div[style*="font-size:40px"][style*="line-height:1"] {
+    font-size: 32px !important;
   }
   /* 4-module cards */
   article[style*="grid-template-columns:80px"] {
@@ -568,7 +597,8 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
     padding-bottom: 56px !important;
   }
   /* Form grids */
-  div[style*="grid-template-columns:1fr 1fr 1fr"][style*="gap:18px"] {
+  div[style*="grid-template-columns:1fr 1fr 1fr"][style*="gap:18px"],
+  div[style*="grid-template-columns:1fr 1fr 1fr"][style*="gap:10px"] {
     grid-template-columns: 1fr !important;
   }
   /* Body text */
@@ -579,6 +609,10 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   /* Flex wrapping for CTAs */
   div[style*="display:flex"][style*="gap:14px"] {
     flex-wrap: wrap !important;
+  }
+  /* Social proof flex gap */
+  div[style*="display:flex"][style*="gap:48px"] {
+    gap: 32px !important;
   }
   /* Roadmap vertical adjustments */
   .yell-roadmap {
@@ -634,12 +668,29 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
     line-height: 25px !important;
   }
   /* Stat counters */
+  div[style*="font-size:52px"] {
+    font-size: 30px !important;
+  }
   div[style*="font-size:48px"][style*="font-weight:800"],
   div[style*="font-size:48px"][style*="line-height:1"] {
     font-size: 32px !important;
   }
+  div[style*="font-size:44px"][style*="font-weight:800"],
+  div[style*="font-size:44px"][style*="line-height:1"] {
+    font-size: 28px !important;
+  }
+  div[style*="font-size:40px"][style*="line-height:1"] {
+    font-size: 26px !important;
+  }
   span[style*="font-size:40px"][style*="font-weight:800"] {
     font-size: 28px !important;
+  }
+  /* Stats grids keep 2-col on mobile */
+  div[style*="grid-template-columns:repeat(6,1fr)"][style*="gap:28px"],
+  div[style*="grid-template-columns:repeat(3,1fr)"][style*="gap:36px"],
+  div[style*="grid-template-columns:repeat(3,1fr)"][style*="gap:28px"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 16px !important;
   }
   /* Section top/bottom padding */
   section[style*="padding:80px"],
@@ -699,6 +750,10 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   p[style*="font-size:17px"] {
     font-size: 15px !important;
     line-height: 24px !important;
+  }
+  /* Social proof flex gap */
+  div[style*="display:flex"][style*="gap:48px"] {
+    gap: 24px !important;
   }
   /* Pricing large number */
   div[style*="font-size:48px"][style*="letter-spacing:-0.02em"] {
