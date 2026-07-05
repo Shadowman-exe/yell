@@ -1,6 +1,10 @@
 /* YELL site-wide — global overflow protection */
+*, *::before, *::after { box-sizing: border-box; }
 html, body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
+image-slot { max-width: 100%; }
+/* Prevent long numbers/text in stat counters from causing overflow */
+[data-counter] { word-break: break-word; overflow-wrap: break-word; }
 
 /* YELL site-wide animations — respects prefers-reduced-motion */
 
@@ -451,6 +455,11 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   div[style*="font-size:52px"] {
     font-size: 40px !important;
   }
+  /* Contain all sections to prevent child overflow */
+  section, main > div > section, main > div > div > section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
 }
 
 /* ─── RESPONSIVE: TABLET PORTRAIT (≤768px) ─── */
@@ -614,9 +623,35 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
   div[style*="display:flex"][style*="gap:48px"] {
     gap: 32px !important;
   }
+  /* Social proof stats — stack on narrow tablets */
+  div[style*="display:flex"][style*="gap:48px"] {
+    flex-wrap: wrap !important;
+  }
+  /* Prevent justify-content:space-between from over-spreading on single-col */
+  div[style*="justify-content:space-between"][style*="flex-wrap:wrap"] {
+    gap: 24px !important;
+  }
   /* Roadmap vertical adjustments */
   .yell-roadmap {
     max-width: 100% !important;
+  }
+  /* Nav container padding */
+  header > div[style*="padding:16px 32px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  /* Ensure all grid children don't overflow parent */
+  [style*="display:grid"] > * {
+    min-width: 0;
+  }
+  /* Reduce large vertical gaps when items stack */
+  section[style*="gap:48px"],
+  div[style*="gap:48px"] {
+    gap: 32px !important;
+  }
+  section[style*="gap:40px"],
+  div[style*="gap:40px"] {
+    gap: 28px !important;
   }
 }
 
@@ -764,6 +799,62 @@ a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 4px !important;
+  }
+  /* Social proof stats — fully stack on mobile */
+  div[style*="display:flex"][style*="gap:48px"] {
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  /* Reduce stacked grid gaps further */
+  section[style*="gap:48px"],
+  div[style*="gap:48px"] {
+    gap: 24px !important;
+  }
+  section[style*="gap:40px"],
+  div[style*="gap:40px"] {
+    gap: 20px !important;
+  }
+  section[style*="gap:32px"],
+  div[style*="gap:32px"] {
+    gap: 18px !important;
+  }
+  /* Nav container tight padding */
+  header > div[style*="padding:16px 32px"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  /* Apply form section padding */
+  section[style*="padding:32px 32px"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  /* Ensure all grid children don't overflow */
+  [style*="display:grid"] > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  /* Pricing tier max-width fits mobile */
+  div[style*="grid-template-columns:repeat(3,1fr)"][style*="align-items:stretch"] {
+    max-width: 100% !important;
+  }
+  /* Reduce large inner padding on mobile */
+  div[style*="padding:32px 24px"],
+  div[style*="padding:28px 24px"] {
+    padding: 22px 16px !important;
+  }
+  /* Contact card grid on Apply page */
+  div[style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* Image slots full width safety */
+  image-slot {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 180px;
+  }
+  /* Footer grid extra tight */
+  div[style*="padding:56px 32px"] {
+    padding: 36px 16px 28px !important;
   }
 }
 
