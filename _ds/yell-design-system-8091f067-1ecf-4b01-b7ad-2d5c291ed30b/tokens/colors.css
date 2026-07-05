@@ -1,0 +1,41 @@
+/* ============================================
+   YELL — COLOR TOKENS
+   Poppy Red carries ambition; Obsidian Black + whitespace carry credibility.
+   60 / 30 / 10 rule: ~60% white/chalk, ~30% ink, ~10% red.
+   ============================================ */
+:root {
+  /* Core palette */
+  --yell-red: #FF0000;      /* Poppy Red — primary brand, CTAs, key numbers */
+  --yell-black: #111111;    /* Obsidian Black — text, dark surfaces, structure */
+  --yell-white: #FFFFFF;    /* Pure White — base bg, reversed text */
+  --yell-chalk: #F1F0EE;    /* Chalk White — soft section bg, cards */
+  --yell-linen: #FAEFE0;    /* Classic Linen — warm highlight / feature zones */
+
+  /* Extended / functional (stay within brand temperature) */
+  --yell-red-hover: #D60000; /* CTA hover / pressed */
+  --yell-red-tint: #FFEBEB;  /* red-tinted highlight bg */
+  --yell-ink-70: #3A3A3A;    /* secondary text */
+  --yell-ink-45: #6E6E6E;    /* muted text, captions, metadata */
+  --yell-line: #E4E2DE;      /* hairline dividers, card borders */
+  --yell-success: #1B7A43;   /* positive states (sparingly) */
+  --yell-warning: #B4690E;   /* caution states */
+
+  /* ---- Semantic aliases ---- */
+  --brand: var(--yell-red);
+  --brand-hover: var(--yell-red-hover);
+
+  --surface-base: var(--yell-white);
+  --surface-soft: var(--yell-chalk);
+  --surface-warm: var(--yell-linen);
+  --surface-dark: var(--yell-black);
+  --surface-brand: var(--yell-red);
+
+  --text-primary: var(--yell-black);
+  --text-secondary: var(--yell-ink-70);
+  --text-muted: var(--yell-ink-45);
+  --text-on-dark: var(--yell-white);
+  --text-on-brand: var(--yell-white);
+
+  --border-hairline: var(--yell-line);
+  --accent-rule: var(--yell-red);
+}

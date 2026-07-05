@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/styles.css">
+<script src="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/_ds_bundle.js"></script>
+<link rel="stylesheet" href="animations.css">
+<script src="animations.js"></script>
+<style>
+  @media (max-width:768px) {
+    .yell-cta-grid { grid-template-columns:1fr !important; }
+    .yell-cta-card { min-height:auto !important; }
+    .yell-footer-grid { grid-template-columns:1fr !important; gap:32px !important; }
+  }
+</style>
+</helmet>
+<div>
+  <!-- GLOBAL CTA — two paths -->
+  <section style="background:var(--yell-linen)">
+    <div style="max-width:1200px; margin:0 auto; padding:80px 32px">
+      <div style="text-align:center; margin-bottom:48px">
+        <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">Get started</span>
+        <h2 style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; margin:12px 0 0">Two ways to bring YELL to your world.</h2>
+      </div>
+      <div class="yell-cta-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:24px">
+        <div data-cta-path class="yell-cta-card" style="background:var(--yell-black); border:1px solid var(--yell-black); border-radius:16px; padding:44px 36px; display:flex; flex-direction:column; position:relative; overflow:hidden; min-height:420px">
+          <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:var(--yell-red)"></div>
+          <span style="display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--yell-red); margin-bottom:16px">For students</span>
+          <h3 style="font-family:var(--font-display); font-weight:700; font-size:28px; line-height:34px; color:#fff; margin:0 0 12px">Build your first real business.</h3>
+          <p style="font-family:var(--font-body); font-size:15px; line-height:24px; color:rgba(255,255,255,0.6); margin:0 0 28px; flex:1">Apply as an individual or with a team. Pick a product, source it, brand it, sell it, and pitch it — all in one program.</p>
+          <ul style="list-style:none; padding:0; margin:0 0 32px; display:flex; flex-direction:column; gap:10px">
+            <li style="font-family:var(--font-body); font-size:14px; color:rgba(255,255,255,0.75); display:flex; align-items:center; gap:10px"><span style="color:var(--yell-red); font-weight:800">✓</span> Hands-on entrepreneurship</li>
+            <li style="font-family:var(--font-body); font-size:14px; color:rgba(255,255,255,0.75); display:flex; align-items:center; gap:10px"><span style="color:var(--yell-red); font-weight:800">✓</span> Keep your profits</li>
+            <li style="font-family:var(--font-body); font-size:14px; color:rgba(255,255,255,0.75); display:flex; align-items:center; gap:10px"><span style="color:var(--yell-red); font-weight:800">✓</span> Certificate + portfolio venture</li>
+          </ul>
+          <div style="display:flex; gap:12px">
+            <a href="Apply.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-black); background:#fff; border-radius:8px; padding:14px 28px; line-height:1">Apply now</a>
+            <a href="Pricing.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:#fff; border:2px solid rgba(255,255,255,0.3); border-radius:8px; padding:12px 24px; line-height:1">See pricing</a>
+          </div>
+        </div>
+        <div data-cta-path class="yell-cta-card" style="background:#fff; border:1px solid var(--yell-line); border-radius:16px; padding:44px 36px; display:flex; flex-direction:column; position:relative; overflow:hidden; min-height:420px">
+          <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:var(--yell-black)"></div>
+          <span style="display:inline-block; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--yell-ink-45); margin-bottom:16px">For universities</span>
+          <h3 style="font-family:var(--font-display); font-weight:700; font-size:28px; line-height:34px; color:var(--yell-black); margin:0 0 12px">Bring YELL to your campus.</h3>
+          <p style="font-family:var(--font-body); font-size:15px; line-height:24px; color:var(--yell-ink-70); margin:0 0 28px; flex:1">Partner with YELL to give your students a real-world entrepreneurship experience — branded to your institution, run by our team.</p>
+          <ul style="list-style:none; padding:0; margin:0 0 32px; display:flex; flex-direction:column; gap:10px">
+            <li style="font-family:var(--font-body); font-size:14px; color:var(--yell-ink-70); display:flex; align-items:center; gap:10px"><span style="color:var(--yell-red); font-weight:800">✓</span> White-label program delivery</li>
+            <li style="font-family:var(--font-body); font-size:14px; color:var(--yell-ink-70); display:flex; align-items:center; gap:10px"><span style="color:var(--yell-red); font-weight:800">✓</span> Placement-ready outcomes</li>
+            <li style="font-family:var(--font-body); font-size:14px; color:var(--yell-ink-70); display:flex; align-items:center; gap:10px"><span style="color:var(--yell-red); font-weight:800">✓</span> Dedicated partnership manager</li>
+          </ul>
+          <div style="display:flex; gap:12px">
+            <a href="Universities.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:#fff; background:var(--yell-black); border-radius:8px; padding:14px 28px; line-height:1">Partner with us</a>
+            <a href="Universities.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-black); border:2px solid var(--yell-line); border-radius:8px; padding:12px 24px; line-height:1">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:var(--yell-black)">
+    <div class="yell-footer-grid" style="max-width:1200px; margin:0 auto; padding:56px 32px 40px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px">
+      <div>
+        <img src="assets/logo-yell-white.png" alt="YELL" style="height:26px; width:auto; display:block; margin-bottom:18px">
+        <p style="font-family:var(--font-display); font-weight:700; font-size:22px; line-height:1.2; color:var(--yell-white); margin:0 0 14px">Learn. Build. Sell.</p>
+        <p style="font-family:var(--font-body); font-size:14px; line-height:22px; color:rgba(255,255,255,0.55); margin:0; max-width:320px">India's first hands-on entrepreneurship programme. Students don't study business - they run one.</p>
+      </div>
+
+      <nav aria-label="Footer" style="display:flex; flex-direction:column; gap:12px">
+        <span style="font-family:var(--font-body); font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:2px">Explore</span>
+        <a href="Program.dc.html" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">The Program</a>
+        <a href="Pricing.dc.html" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">Pricing</a>
+        <a href="Universities.dc.html" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">For Universities</a>
+        <a href="Proof.dc.html" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">Proof</a>
+        <a href="Mentors.dc.html" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">Mentors</a>
+        <a href="About.dc.html" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">About</a>
+      </nav>
+
+      <div style="display:flex; flex-direction:column; gap:12px">
+        <span style="font-family:var(--font-body); font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:2px">Contact</span>
+        <a href="mailto:yell@ebibil.com" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">yell@ebibil.com</a>
+        <a href="tel:+916299472740" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">+91 62994 72740</a>
+        <a href="https://instagram.com/yell.india" style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82); text-decoration:none">@yell.india</a>
+        <span style="font-family:var(--font-body); font-size:15px; color:rgba(255,255,255,0.82)">yellindia.in</span>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08)">
+      <div style="max-width:1200px; margin:0 auto; padding:20px 32px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between">
+        <span style="font-family:var(--font-body); font-size:13px; color:rgba(255,255,255,0.45)">© E-Bibil Technologies Pvt. Ltd. 2026–27</span>
+        <span style="font-family:var(--font-body); font-size:13px; color:rgba(255,255,255,0.45)">Young Entrepreneurs Learning Labz</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:520}}"></script>
+</body>
+</html>

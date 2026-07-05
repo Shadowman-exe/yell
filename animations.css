@@ -1,0 +1,495 @@
+/* YELL site-wide animations — respects prefers-reduced-motion */
+
+/* ─── SCROLL REVEAL BASE ─── */
+[data-anim] {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+[data-anim].is-visible {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* fade-up */
+[data-anim="fade-up"] { transform: translateY(40px); }
+[data-anim="fade-up"].is-visible {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* fade-in */
+[data-anim="fade-in"].is-visible {
+  animation: fadeIn 0.6s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* slide-right */
+[data-anim="slide-right"] { transform: translateX(60px); }
+[data-anim="slide-right"].is-visible {
+  animation: slideRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes slideRight {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* slide-left */
+[data-anim="slide-left"] { transform: translateX(-60px); }
+[data-anim="slide-left"].is-visible {
+  animation: slideLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes slideLeft {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* scale-in */
+[data-anim="scale-in"] { transform: scale(0.8); }
+[data-anim="scale-in"].is-visible {
+  animation: scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes scaleIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ─── STAGGER DELAYS ─── */
+[data-anim-delay="1"] { animation-delay: 0.08s !important; }
+[data-anim-delay="2"] { animation-delay: 0.16s !important; }
+[data-anim-delay="3"] { animation-delay: 0.24s !important; }
+[data-anim-delay="4"] { animation-delay: 0.32s !important; }
+[data-anim-delay="5"] { animation-delay: 0.40s !important; }
+[data-anim-delay="6"] { animation-delay: 0.48s !important; }
+[data-anim-delay="7"] { animation-delay: 0.56s !important; }
+[data-anim-delay="8"] { animation-delay: 0.64s !important; }
+[data-anim-delay="9"] { animation-delay: 0.72s !important; }
+[data-anim-delay="10"] { animation-delay: 0.80s !important; }
+[data-anim-delay="11"] { animation-delay: 0.88s !important; }
+[data-anim-delay="12"] { animation-delay: 0.96s !important; }
+
+/* ─── BUTTON / LINK HOVER ─── */
+a[href*="Apply"], a[href*="Pricing"], a[href*="Proof"],
+a[href*="Program"], a[href*="Universities"], a[href*="Mentors"],
+a[href*="About"], a[href*="path=university"],
+section[style*="background:var(--yell-red)"] a,
+.yell-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+a[href*="Apply"]:hover, a[href*="path=university"]:hover,
+section[style*="background:var(--yell-red)"] a:hover,
+.yell-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* ─── UNIFIED CARD HOVER (light cards: white→black) ─── */
+.yell-hover {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.3s ease,
+              background-color 0.3s ease,
+              border-color 0.3s ease;
+  cursor: default;
+}
+.yell-hover h3,
+.yell-hover p,
+.yell-hover span,
+.yell-hover div {
+  transition: color 0.3s ease;
+}
+.yell-hover:hover {
+  transform: translateY(-5px);
+  background-color: var(--yell-black) !important;
+  border-color: var(--yell-red) !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+.yell-hover:hover h3 { color: #fff !important; }
+.yell-hover:hover p { color: rgba(255,255,255,0.75) !important; }
+.yell-hover:hover span[style*="color:var(--yell-ink-45)"],
+.yell-hover:hover span[style*="color:var(--yell-red)"] { color: var(--yell-red) !important; }
+
+/* ─── DARK CARD HOVER (already-dark cards) ─── */
+.yell-hover-dark {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+  cursor: default;
+}
+.yell-hover-dark:hover {
+  transform: translateY(-5px);
+  border-color: var(--yell-red) !important;
+  box-shadow: 0 16px 40px rgba(220,38,38,0.15);
+}
+
+/* ─── MODULE CARD HOVER (color flip to red) ─── */
+.yell-module-hover {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+.yell-module-hover h3,
+.yell-module-hover p {
+  transition: color 0.3s ease;
+}
+.yell-module-hover:hover {
+  transform: translateY(-5px);
+  background: var(--yell-red) !important;
+  border-color: var(--yell-red) !important;
+  box-shadow: 0 14px 36px rgba(220,38,38,0.2);
+}
+.yell-module-hover:hover h3 { color: #fff !important; }
+.yell-module-hover:hover p { color: rgba(255,255,255,0.85) !important; }
+.yell-module-hover:hover span[data-counter],
+.yell-module-hover:hover > span:first-child { color: #fff !important; }
+
+/* ─── ADVANTAGE CARD ─── */
+.yell-adv-card {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+.yell-adv-card h3,
+.yell-adv-card p {
+  transition: color 0.3s ease;
+}
+.yell-adv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  border-color: var(--yell-red) !important;
+}
+
+/* ─── TIMELINE CARD HOVER ─── */
+.yell-timeline-hover {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+}
+.yell-timeline-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+  border-color: var(--yell-red) !important;
+}
+
+/* ─── PRICING TIER HOVER ─── */
+.yell-tier-hover {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.yell-tier-hover h3,
+.yell-tier-hover p,
+.yell-tier-hover span,
+.yell-tier-hover li,
+.yell-tier-hover div {
+  transition: color 0.3s ease;
+}
+.yell-tier-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.14);
+  border-color: var(--yell-red) !important;
+}
+
+/* ─── MENTOR CARD HOVER ─── */
+.yell-mentor-hover {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.yell-mentor-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.1);
+  border-color: var(--yell-red) !important;
+}
+
+/* ─── STEP CARD HOVER (dark section) ─── */
+.yell-step-card {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.yell-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.3);
+  border-color: var(--yell-red) !important;
+}
+
+/* ─── CTA PATH CARD ─── */
+.yell-cta-path {
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.yell-cta-path:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.15);
+  border-color: var(--yell-red) !important;
+}
+
+/* ─── SLIDING NUMBER COUNTER ─── */
+[data-counter] {
+  display: inline-flex;
+  align-items: baseline;
+  overflow: hidden;
+}
+.yell-digit-col {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  position: relative;
+  line-height: 1;
+}
+.yell-digit-strip {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.yell-digit-strip span {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+}
+.yell-digit-static {
+  display: inline-block;
+  line-height: 1;
+}
+
+/* ─── RED ACCENT BAR GROW ─── */
+[data-anim="bar-grow"] {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+[data-anim="bar-grow"].is-visible {
+  animation: barGrow 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes barGrow {
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+/* ─── FAQ ACCORDION ─── */
+details summary span:last-child {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+details[open] summary span:last-child {
+  transform: rotate(45deg);
+}
+details .yell-faq-body {
+  animation: faqOpen 0.3s ease forwards;
+  overflow: hidden;
+}
+@keyframes faqOpen {
+  from { opacity: 0; max-height: 0; }
+  to { opacity: 1; max-height: 300px; }
+}
+
+/* ─── PARALLAX ─── */
+[data-parallax] {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* ─── NAV LINK HOVER ─── */
+header nav a {
+  transition: color 0.2s ease !important;
+}
+footer nav a, footer a {
+  transition: color 0.2s ease !important;
+}
+footer nav a:hover, footer a:hover {
+  color: rgba(255,255,255,1) !important;
+}
+
+/* ─── ARROW LINK HOVER ─── */
+a[style*="text-decoration:none"][style*="color:var(--yell-red)"] {
+  transition: gap 0.2s ease;
+}
+
+/* ─── SCROLL ROADMAP ─── */
+.yell-roadmap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 0 0 40px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.yell-roadmap-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 14px;
+  width: 4px;
+  height: auto;
+  background: var(--yell-line);
+  border-radius: 4px;
+  z-index: 0;
+}
+.yell-roadmap-progress {
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 4px;
+  height: 0;
+  background: var(--yell-red);
+  border-radius: 4px;
+  z-index: 1;
+  transition: height 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.yell-roadmap-step {
+  position: relative;
+  z-index: 2;
+  padding: 0 0 32px 0;
+  text-align: left;
+  opacity: 0.35;
+  transform: translateX(-12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.yell-roadmap-step:last-child {
+  padding-bottom: 0;
+}
+.yell-roadmap-step.is-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.yell-roadmap-step.is-complete {
+  opacity: 0.7;
+  transform: translateX(0);
+}
+.yell-roadmap-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--yell-line);
+  border: 3px solid var(--yell-white);
+  transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  position: absolute;
+  left: -40px;
+  top: 28px;
+  z-index: 3;
+  flex-shrink: 0;
+}
+.yell-roadmap-step.is-active .yell-roadmap-dot {
+  background: var(--yell-red);
+  transform: scale(1.4);
+  box-shadow: 0 0 0 6px rgba(220,38,38,0.15);
+}
+.yell-roadmap-step.is-complete .yell-roadmap-dot {
+  background: var(--yell-red);
+}
+.yell-roadmap-card {
+  background: var(--yell-white);
+  border: 1px solid var(--yell-line);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.yell-roadmap-step.is-active .yell-roadmap-card {
+  border-color: var(--yell-red);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  transform: scale(1.02);
+}
+
+/* Mobile vertical roadmap */
+@media (max-width: 768px) {
+  .yell-roadmap {
+    padding: 0 0 0 32px;
+  }
+  .yell-roadmap-dot {
+    left: -32px;
+  }
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  section[style*="grid-template-columns:repeat(4"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  div[style*="grid-template-columns:repeat(5"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  div[style*="grid-template-columns:repeat(6"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  section[style*="grid-template-columns:1.08fr"],
+  section[style*="grid-template-columns:1.05fr"],
+  section[style*="grid-template-columns:0.9fr"],
+  section[style*="grid-template-columns:0.85fr"],
+  section[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns:repeat(2"],
+  div[style*="grid-template-columns:repeat(3"],
+  div[style*="grid-template-columns:repeat(4"],
+  div[style*="grid-template-columns:repeat(5"],
+  div[style*="grid-template-columns:repeat(6"],
+  ol[style*="grid-template-columns:repeat(5"] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-step-card] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-step-card] > div[style*="min-height"] {
+    min-height: auto !important;
+  }
+  [data-step-card] img {
+    height: 200px !important;
+  }
+  section[style*="padding:80px 32px"],
+  section[style*="padding:72px 32px"],
+  section[style*="padding:88px 32px"],
+  div[style*="padding:80px 32px"],
+  div[style*="padding:72px 32px"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  h1[style*="font-size:52px"],
+  h1[style*="font-size:56px"] {
+    font-size: 36px !important;
+    line-height: 42px !important;
+  }
+  h2[style*="font-size:40px"] {
+    font-size: 30px !important;
+    line-height: 36px !important;
+  }
+  h2[style*="font-size:36px"],
+  h2[style*="font-size:34px"] {
+    font-size: 26px !important;
+    line-height: 32px !important;
+  }
+  div[style*="grid-template-columns:repeat(6"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  article[style*="grid-template-columns:80px"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ─── REDUCED MOTION ─── */
+@media (prefers-reduced-motion: reduce) {
+  [data-anim] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .yell-hover:hover,
+  .yell-hover-dark:hover,
+  .yell-tier-hover:hover,
+  .yell-mentor-hover:hover,
+  .yell-module-hover:hover,
+  .yell-step-card:hover,
+  .yell-timeline-hover:hover {
+    transform: none;
+  }
+  details summary span:last-child {
+    transition: none;
+  }
+  .yell-digit-strip {
+    transition: none !important;
+  }
+  .yell-roadmap-step {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .yell-roadmap-progress {
+    transition: none !important;
+  }
+  [data-parallax] {
+    transition: none !important;
+  }
+}

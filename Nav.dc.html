@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/styles.css">
+<script src="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/_ds_bundle.js"></script>
+</helmet>
+<header style="position:sticky; top:0; z-index:50; background:var(--yell-black); border-bottom:1px solid rgba(255,255,255,0.08)">
+  <div style="max-width:1200px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px">
+    <a href="Home.dc.html" aria-label="YELL home" style="display:flex; align-items:center; flex:0 0 auto">
+      <img src="assets/logo-yell-white.png" alt="YELL - Young Entrepreneurs Learning Labz" style="height:28px; width:auto; display:block">
+    </a>
+
+    <nav aria-label="Primary" style="display:{{ desktopNav }}; align-items:center; gap:28px">
+      <sc-for list="{{ links }}" as="link" hint-placeholder-count="6">
+        <a href="{{ link.href }}" aria-current="{{ link.current }}" style="{{ link.style }}">{{ link.label }}</a>
+      </sc-for>
+      <div style="display:flex; align-items:center; gap:10px; margin-left:8px">
+        <a href="Apply.dc.html?path=university" style="font-family:var(--font-display); font-weight:700; font-size:15px; text-decoration:none; color:var(--yell-white); border:2px solid rgba(255,255,255,0.55); border-radius:8px; padding:9px 16px; line-height:1; white-space:nowrap">Book a call</a>
+        <a href="Apply.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:15px; text-decoration:none; color:var(--yell-white); background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:9px 18px; line-height:1; white-space:nowrap">Apply now</a>
+      </div>
+    </nav>
+
+    <button type="button" aria-label="Open menu" aria-expanded="{{ open }}" onClick="{{ toggle }}" style="display:{{ mobileBtn }}; align-items:center; justify-content:center; width:44px; height:44px; background:transparent; border:1px solid rgba(255,255,255,0.25); border-radius:8px; cursor:pointer; color:var(--yell-white); flex:0 0 auto">
+      <span style="font-size:20px; line-height:1">{{ menuGlyph }}</span>
+    </button>
+  </div>
+
+  <div style="display:{{ mobilePanel }}; border-top:1px solid rgba(255,255,255,0.08); background:var(--yell-black)">
+    <div style="max-width:1200px; margin:0 auto; padding:12px 24px 20px; display:flex; flex-direction:column; gap:2px">
+      <sc-for list="{{ links }}" as="link" hint-placeholder-count="6">
+        <a href="{{ link.href }}" aria-current="{{ link.current }}" style="{{ link.mobileStyle }}">{{ link.label }}</a>
+      </sc-for>
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px">
+        <a href="Apply.dc.html?path=university" style="text-align:center; font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-white); border:2px solid rgba(255,255,255,0.55); border-radius:8px; padding:13px 16px; line-height:1">Book a call</a>
+        <a href="Apply.dc.html" style="text-align:center; font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-white); background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:13px 16px; line-height:1">Apply now</a>
+      </div>
+    </div>
+  </div>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:72},&quot;active&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { open: false, w: 1200 };
+
+  componentDidMount() {
+    this._onResize = () => this.setState({ w: window.innerWidth, open: window.innerWidth > 900 ? false : this.state.open });
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+    this._onKey = (e) => { if (e.key === 'Escape') this.setState({ open: false }); };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    window.removeEventListener('keydown', this._onKey);
+  }
+
+  renderVals() {
+    const active = this.props.active || '';
+    const isMobile = this.state.w <= 900;
+    const pages = [
+      { key: 'program', label: 'The Program', href: 'Program.dc.html' },
+      { key: 'pricing', label: 'Pricing', href: 'Pricing.dc.html' },
+      { key: 'universities', label: 'For Universities', href: 'Universities.dc.html' },
+      { key: 'proof', label: 'Proof', href: 'Proof.dc.html' },
+      { key: 'mentors', label: 'Mentors', href: 'Mentors.dc.html' },
+      { key: 'about', label: 'About', href: 'About.dc.html' },
+    ];
+    const links = pages.map(p => {
+      const on = p.key === active;
+      return {
+        label: p.label,
+        href: p.href,
+        current: on ? 'page' : undefined,
+        style: `font-family:var(--font-body); font-size:15px; font-weight:${on ? 700 : 500}; text-decoration:none; color:${on ? 'var(--yell-red)' : 'rgba(255,255,255,0.82)'}; white-space:nowrap; padding:4px 0; border-bottom:2px solid ${on ? 'var(--yell-red)' : 'transparent'}`,
+        mobileStyle: `font-family:var(--font-body); font-size:17px; font-weight:${on ? 700 : 500}; text-decoration:none; color:${on ? 'var(--yell-red)' : 'var(--yell-white)'}; padding:13px 4px; border-bottom:1px solid rgba(255,255,255,0.06)`,
+      };
+    });
+    return {
+      links,
+      open: this.state.open,
+      toggle: () => this.setState(s => ({ open: !s.open })),
+      desktopNav: isMobile ? 'none' : 'flex',
+      mobileBtn: isMobile ? 'inline-flex' : 'none',
+      mobilePanel: isMobile && this.state.open ? 'block' : 'none',
+      menuGlyph: this.state.open ? '✕' : '☰',
+    };
+  }
+}
+</script>
+</body>
+</html>

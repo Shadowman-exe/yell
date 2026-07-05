@@ -1,0 +1,30 @@
+/* ============================================
+   YELL — SPACING, RADIUS, LAYOUT TOKENS
+   Spacing scale: 4·8·12·16·24·32·48·64·96. Use multiples; don't freehand.
+   ============================================ */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Corner radius */
+  --radius-card: 12px;   /* cards & buttons 8–12 */
+  --radius-button: 8px;
+  --radius-photo: 14px;  /* photography 12–16 */
+  --radius-chip: 999px;  /* pill — tags/chips only */
+
+  /* Layout */
+  --content-max: 1200px;
+  --grid-cols: 12; /* @kind other */
+  --grid-gutter: 24px;
+
+  /* Section-opener accent rule */
+  --rule-length: 64px;
+  --rule-weight: 3px;
+}

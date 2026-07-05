@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>YELL | Learn. Build. Sell.</title>
+<link rel="icon" type="image/png" href="assets/logo-mark-red.png">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/styles.css">
+<script src="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--yell-white); }
+  a:focus-visible, button:focus-visible { outline:3px solid var(--yell-red); outline-offset:2px; border-radius:6px; }
+</style>
+<link rel="stylesheet" href="animations.css">
+<script src="animations.js"></script>
+</helmet>
+<div style="background:var(--yell-white); font-family:var(--font-body); color:var(--yell-black)">
+  <a href="#main" style="position:absolute; left:-9999px; top:0; background:var(--yell-black); color:#fff; padding:10px 16px; z-index:100; border-radius:0 0 8px 0" style-focus="left:0">Skip to content</a>
+
+  <dc-import name="Nav" active="" hint-size="100%,72px"></dc-import>
+
+  <main id="main">
+    <!-- C - CAPTURE / HERO -->
+    <section aria-labelledby="hero-h1" style="max-width:1200px; margin:0 auto; padding:72px 32px 56px; display:grid; grid-template-columns:1.08fr 0.92fr; gap:56px; align-items:center">
+      <div data-anim="fade-up">
+        <span style="display:inline-block; font-family:var(--font-body); font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red)">Learn. Build. Sell.</span>
+        <h1 id="hero-h1" style="font-family:var(--font-display); font-weight:700; font-size:56px; line-height:60px; letter-spacing:-0.01em; margin:16px 0 20px">Don't just graduate.<br>Graduate as a founder.</h1>
+        <p style="font-size:18px; line-height:28px; color:var(--yell-ink-70); max-width:540px; margin:0 0 28px">India's first hands-on entrepreneurship programme. Students build a real business - source it, brand it, sell it to real customers, and pitch it live.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px">
+          <a href="Apply.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:18px; text-decoration:none; color:#fff; background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:16px 30px; line-height:1">Apply now</a>
+          <a href="Apply.dc.html?path=university" style="font-family:var(--font-display); font-weight:700; font-size:18px; text-decoration:none; color:var(--yell-black); border:2px solid var(--yell-black); border-radius:8px; padding:16px 30px; line-height:1">Book a call</a>
+        </div>
+      </div>
+      <div data-anim="slide-right" data-anim-delay="2"><image-slot id="home-hero" style="width:100%; height:460px; border-radius:14px" shape="rounded" radius="14" placeholder="Drop a documentary photo - students selling at a pop-up"></image-slot></div>
+    </section>
+
+    <!-- R - RELATE -->
+    <section aria-labelledby="relate-h2" style="background:var(--yell-chalk); border-top:1px solid var(--yell-line); border-bottom:1px solid var(--yell-line)">
+      <div style="max-width:1200px; margin:0 auto; padding:80px 32px">
+        <span data-anim="bar-grow" style="display:block; width:64px; height:3px; background:var(--yell-red); border-radius:3px; margin-bottom:22px"></span>
+        <h2 id="relate-h2" data-anim="fade-up" style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; margin:0 0 14px; max-width:760px">Stop studying business. Start running one.</h2>
+        <p data-anim="fade-up" data-anim-delay="1" style="font-size:18px; line-height:28px; color:var(--yell-ink-70); max-width:680px; margin:0 0 44px">Most students graduate having <em>studied</em> business without ever running one - no real customers, no real revenue, no real stakes. We flip that.</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px">
+          <div data-anim="slide-left" style="background:var(--yell-white); border:1px solid var(--yell-line); border-radius:12px; padding:32px">
+            <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45); margin-bottom:16px">The classroom</span>
+            <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:14px">
+              <li style="font-size:17px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-ink-45)">-</span>Case studies about other people's companies.</li>
+              <li style="font-size:17px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-ink-45)">-</span>Exams that reward the right answer, not the sale.</li>
+              <li style="font-size:17px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-ink-45)">-</span>Hypothetical customers who never say no.</li>
+            </ul>
+          </div>
+          <div data-anim="slide-right" data-anim-delay="2" style="background:var(--yell-black); border:1px solid var(--yell-black); border-radius:12px; padding:32px">
+            <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red); margin-bottom:16px">The YELL way</span>
+            <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:14px">
+              <li style="font-size:17px; line-height:24px; color:rgba(255,255,255,0.9); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">→</span>A real product you source and brand yourself.</li>
+              <li style="font-size:17px; line-height:24px; color:rgba(255,255,255,0.9); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">→</span>Real customers, at a real pop-up, with real money.</li>
+              <li style="font-size:17px; line-height:24px; color:rgba(255,255,255,0.9); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">→</span>Real profit - and the margin is the grade.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E - EXPLAIN -->
+    <section aria-labelledby="explain-h2" style="max-width:1200px; margin:0 auto; padding:80px 32px">
+      <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">How it works</span>
+      <h2 id="explain-h2" data-anim="fade-up" style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; margin:12px 0 8px">From idea to first sale - the YELL journey.</h2>
+      <p style="font-size:18px; line-height:28px; color:var(--yell-ink-70); max-width:620px; margin:0 0 44px">Four modules. Every one ends in something you've actually built or sold.</p>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px">
+        <div data-anim="fade-up" data-anim-delay="1" data-module-card style="background:var(--yell-white); border:1px solid var(--yell-line); border-radius:12px; padding:28px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:32px; line-height:1; color:var(--yell-red)" data-counter="01">01</span>
+          <h3 style="font-family:var(--font-display); font-weight:600; font-size:21px; line-height:28px; margin:16px 0 8px">Business Foundation &amp; Market Discovery</h3>
+          <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Find a product, a market, and a reason people will pay.</p>
+        </div>
+        <div data-anim="fade-up" data-anim-delay="2" data-module-card style="background:var(--yell-white); border:1px solid var(--yell-line); border-radius:12px; padding:28px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:32px; line-height:1; color:var(--yell-red)" data-counter="02">02</span>
+          <h3 style="font-family:var(--font-display); font-weight:600; font-size:21px; line-height:28px; margin:16px 0 8px">Branding, AI Tools &amp; Negotiation</h3>
+          <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Build the brand, wield the tools, and close the deal with vendors.</p>
+        </div>
+        <div data-anim="fade-up" data-anim-delay="3" data-module-card style="background:var(--yell-white); border:1px solid var(--yell-line); border-radius:12px; padding:28px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:32px; line-height:1; color:var(--yell-red)" data-counter="03">03</span>
+          <h3 style="font-family:var(--font-display); font-weight:600; font-size:21px; line-height:28px; margin:16px 0 8px">Digital Presence &amp; Sales Execution</h3>
+          <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Set up the store, run the pop-up, and sell to real customers.</p>
+        </div>
+        <div data-anim="fade-up" data-anim-delay="4" data-module-card style="background:var(--yell-white); border:1px solid var(--yell-line); border-radius:12px; padding:28px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:32px; line-height:1; color:var(--yell-red)" data-counter="04">04</span>
+          <h3 style="font-family:var(--font-display); font-weight:600; font-size:21px; line-height:28px; margin:16px 0 8px">Pitching, Storytelling &amp; Demo Day</h3>
+          <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Tell the story of what you built - and pitch it to a room.</p>
+        </div>
+      </div>
+      <a href="Program.dc.html" style="display:inline-block; margin-top:32px; font-family:var(--font-display); font-weight:700; font-size:17px; color:var(--yell-red); text-decoration:none">See the full program →</a>
+    </section>
+
+    <!-- A - ADVANTAGES -->
+    <section aria-labelledby="adv-h2" style="background:var(--yell-white); border-top:1px solid var(--yell-line)">
+      <div style="max-width:1200px; margin:0 auto; padding:80px 32px">
+        <div style="text-align:center; max-width:640px; margin:0 auto 56px">
+          <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red)">Why YELL</span>
+          <h2 id="adv-h2" data-anim="fade-up" style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; margin:12px 0 12px">What you walk away with.</h2>
+          <p style="font-size:18px; line-height:28px; color:var(--yell-ink-70); margin:0">Not certificates. Not case studies. Real outcomes you can point to.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px">
+          <div data-anim="fade-up" data-anim-delay="1" data-adv-card style="background:var(--yell-chalk); border:1px solid var(--yell-line); border-radius:14px; padding:32px 28px">
+            <div style="width:48px; height:48px; background:var(--yell-red); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:20px; margin:0 0 10px">A real brand you built</h3>
+            <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Not a mock company. A venture with a name, a product, and customers who paid real money.</p>
+          </div>
+          <div data-anim="fade-up" data-anim-delay="2" data-adv-card style="background:var(--yell-chalk); border:1px solid var(--yell-line); border-radius:14px; padding:32px 28px">
+            <div style="width:48px; height:48px; background:var(--yell-red); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:20px; margin:0 0 10px">Your first real revenue</h3>
+            <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Money from real sales, margins you defended, and P&amp;L you can explain in any interview.</p>
+          </div>
+          <div data-anim="fade-up" data-anim-delay="3" data-adv-card style="background:var(--yell-chalk); border:1px solid var(--yell-line); border-radius:14px; padding:32px 28px">
+            <div style="width:48px; height:48px; background:var(--yell-red); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:20px; margin:0 0 10px">Mentorship from operators</h3>
+            <p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">People who've built and scaled real businesses. Not lecturers reading slides.</p>
+          </div>
+          <div data-anim="fade-up" data-anim-delay="4" data-adv-card style="background:var(--yell-black); border:1px solid var(--yell-black); border-radius:14px; padding:32px 28px">
+            <div style="width:48px; height:48px; background:var(--yell-red); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg></div>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:20px; margin:0 0 10px; color:#fff">A pitch-ready venture</h3>
+            <p style="font-size:15px; line-height:23px; color:rgba(255,255,255,0.7); margin:0">Something you can walk into any room and defend with numbers, not slides.</p>
+          </div>
+          <div data-anim="fade-up" data-anim-delay="5" data-adv-card style="background:var(--yell-black); border:1px solid var(--yell-black); border-radius:14px; padding:32px 28px">
+            <div style="width:48px; height:48px; background:var(--yell-red); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 12h4"/><path d="M10 16h4"/></svg></div>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:20px; margin:0 0 10px; color:#fff">A founder portfolio piece</h3>
+            <p style="font-size:15px; line-height:23px; color:rgba(255,255,255,0.7); margin:0">Proof of execution that beats any line on a résumé. Show, don't tell.</p>
+          </div>
+          <div data-anim="fade-up" data-anim-delay="6" data-adv-card style="background:var(--yell-black); border:1px solid var(--yell-black); border-radius:14px; padding:32px 28px">
+            <div style="width:48px; height:48px; background:var(--yell-red); border-radius:10px; display:flex; align-items:center; justify-content:center; margin-bottom:20px"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:20px; margin:0 0 10px; color:#fff">Demo Day recognition</h3>
+            <p style="font-size:15px; line-height:23px; color:rgba(255,255,255,0.7); margin:0">Awards, a Young CEO feature, and a room full of people who watched you do it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- T - TRUST -->
+    <section aria-labelledby="trust-h2" style="background:var(--yell-black)">
+      <div style="max-width:1200px; margin:0 auto; padding:80px 32px">
+        <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red)">The proof</span>
+        <h2 id="trust-h2" data-anim="fade-up" style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; color:var(--yell-white); margin:12px 0 48px; max-width:680px">It already works. Here's the proof. <span style="color:var(--yell-red)">This year.</span></h2>
+        <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:28px; margin-bottom:48px">
+          <div><div style="font-family:var(--font-display); font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.01em; color:var(--yell-red)" data-counter="20">20</div><div style="margin-top:10px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Students</div></div>
+          <div><div style="font-family:var(--font-display); font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.01em; color:var(--yell-white)" data-counter="4">4</div><div style="margin-top:10px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Brands</div></div>
+          <div><div style="font-family:var(--font-display); font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.01em; color:var(--yell-white)" data-counter="₹45K+">₹45K+</div><div style="margin-top:10px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Best day</div></div>
+          <div><div style="font-family:var(--font-display); font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.01em; color:var(--yell-white)" data-counter="42%">42%</div><div style="margin-top:10px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Avg margin</div></div>
+          <div><div style="font-family:var(--font-display); font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.01em; color:var(--yell-white)" data-counter="1,000+">1,000+</div><div style="margin-top:10px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Customers</div></div>
+          <div><div style="font-family:var(--font-display); font-weight:800; font-size:48px; line-height:1; letter-spacing:-0.01em; color:var(--yell-white)" data-counter="200+">200+</div><div style="margin-top:10px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6)">Mentor hrs</div></div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:32px">
+          <span style="font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-right:8px">Brands launched</span>
+          <span data-anim="scale-in" data-anim-delay="1" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:#fff; border:1px solid rgba(255,255,255,0.2); border-radius:999px; padding:8px 16px">SnacQo</span>
+          <span data-anim="scale-in" data-anim-delay="2" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:#fff; border:1px solid rgba(255,255,255,0.2); border-radius:999px; padding:8px 16px">Nover Noir</span>
+          <span data-anim="scale-in" data-anim-delay="3" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:#fff; border:1px solid rgba(255,255,255,0.2); border-radius:999px; padding:8px 16px">Frags &amp; Flavs</span>
+          <span data-anim="scale-in" data-anim-delay="4" style="font-family:var(--font-display); font-weight:700; font-size:15px; color:#fff; border:1px solid rgba(255,255,255,0.2); border-radius:999px; padding:8px 16px">Ghar Sajaoo</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:24px; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.1); padding-top:28px">
+          <p style="font-size:16px; line-height:24px; color:rgba(255,255,255,0.75); margin:0; max-width:560px">One pilot, 20 students, four live ventures - and a Pitch Day judged by <strong style="color:#fff">Arun Mittal, boAt</strong>.</p>
+          <a href="Proof.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:17px; color:var(--yell-red); text-decoration:none; white-space:nowrap">Read the full story →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>
+                      

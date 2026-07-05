@@ -1,0 +1,29 @@
+/* ============================================
+   YELL — TYPOGRAPHY TOKENS
+   Display: Galano Grotesque Alt → Manrope (600/700). Body: Inter.
+   Numbers are a brand feature — set metrics large in the display face.
+   ============================================ */
+:root {
+  --font-display: 'Manrope', 'Galano Grotesque Alt', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Weights */
+  --fw-regular: 400; /* @kind other */
+  --fw-medium: 500;  /* @kind other */
+  --fw-semibold: 600; /* @kind other */
+  --fw-bold: 700;    /* @kind other */
+  --fw-black: 800;   /* @kind other */
+
+  /* Type scale — institutional / web baseline (size / line-height) */
+  --fs-display: 56px;   --lh-display: 60px;
+  --fs-h1: 40px;        --lh-h1: 46px;
+  --fs-h2: 30px;        --lh-h2: 38px;
+  --fs-h3: 22px;        --lh-h3: 30px;
+  --fs-body-l: 18px;    --lh-body-l: 28px;
+  --fs-body: 16px;      --lh-body: 26px;
+  --fs-caption: 13px;   --lh-caption: 18px;
+  --fs-eyebrow: 12px;   --lh-eyebrow: 16px;
+
+  --ls-eyebrow: 0.08em; /* +8% tracking, uppercase */
+  --ls-display: -0.01em;
+}

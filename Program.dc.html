@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>The Program - YELL</title>
+<link rel="icon" type="image/png" href="assets/logo-mark-red.png">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/colors.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/typography.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/styles.css">
+<script src="_ds/yell-design-system-8091f067-1ecf-4b01-b7ad-2d5c291ed30b/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<style>
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--yell-white); }
+  a:focus-visible, button:focus-visible { outline:3px solid var(--yell-red); outline-offset:2px; border-radius:6px; }
+  .modules-section article {
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .modules-section article:hover {
+    background: var(--yell-linen);
+    border-color: rgba(0,0,0,0.06);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+</style>
+<link rel="stylesheet" href="animations.css">
+<script src="animations.js"></script>
+</helmet>
+<div style="background:var(--yell-white); font-family:var(--font-body); color:var(--yell-black)">
+  <a href="#main" style="position:absolute; left:-9999px; top:0; background:var(--yell-black); color:#fff; padding:10px 16px; z-index:100" style-focus="left:0">Skip to content</a>
+  <dc-import name="Nav" active="program" hint-size="100%,72px"></dc-import>
+
+  <main id="main">
+    <!-- HERO -->
+    <section style="max-width:1200px; margin:0 auto; padding:72px 32px 56px; display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center">
+      <div>
+        <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red)">The Program</span>
+        <h1 style="font-family:var(--font-display); font-weight:700; font-size:52px; line-height:56px; letter-spacing:-0.01em; margin:16px 0 20px" data-anim="fade-up">The programme where you build a real business.</h1>
+        <p style="font-size:18px; line-height:28px; color:var(--yell-ink-70); max-width:540px; margin:0 0 28px">Hybrid, hands-on, and built around one outcome: a venture with real customers and real revenue. You don't watch - you run it.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px">
+          <a href="Apply.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:18px; text-decoration:none; color:#fff; background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:16px 30px; line-height:1">Apply now</a>
+          <a href="Pricing.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:18px; text-decoration:none; color:var(--yell-black); border:2px solid var(--yell-black); border-radius:8px; padding:16px 30px; line-height:1">See pricing</a>
+        </div>
+      </div>
+      <image-slot id="program-hero" style="width:100%; height:440px; border-radius:14px" shape="rounded" radius="14" placeholder="Drop a photo - a live pop-up or market visit"></image-slot>
+    </section>
+
+    <!-- HOW IT WORKS - TIMELINE -->
+    <section style="background:var(--yell-white); border-top:1px solid var(--yell-line); border-bottom:1px solid var(--yell-line)">
+      <div style="max-width:1200px; margin:0 auto; padding:80px 32px">
+        <div style="text-align:center; max-width:640px; margin:0 auto 56px">
+          <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red)">The Journey</span>
+          <h2 style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; margin:12px 0 12px" data-anim="fade-up">How it works, start to finish.</h2>
+          <p style="font-size:18px; line-height:28px; color:var(--yell-ink-70); margin:0">Eleven stages. From being selected to holding a printed report on the business you ran.</p>
+        </div>
+
+        <!-- PHASE 1: FOUNDATION -->
+        <div style="margin-bottom:48px">
+          <div data-anim="fade-up" style="display:flex; align-items:center; gap:12px; margin-bottom:20px">
+            <span style="display:inline-block; background:var(--yell-red); color:#fff; font-family:var(--font-display); font-weight:700; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:6px 14px; border-radius:999px">Phase 1</span>
+            <span style="font-family:var(--font-display); font-weight:700; font-size:18px">Foundation</span>
+            <span style="flex:1; height:1px; background:var(--yell-line)"></span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px">
+            <div data-anim="fade-up" data-anim-delay="1" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px 24px 24px 24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="01">01</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Selection</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Apply, interview, get in.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="2" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="02">02</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Team formation</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Build the founding team you'll run with.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="3" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="03">03</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Venture creation</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Choose the product and the market.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 2: BUILD -->
+        <div style="margin-bottom:48px">
+          <div data-anim="fade-up" style="display:flex; align-items:center; gap:12px; margin-bottom:20px">
+            <span style="display:inline-block; background:var(--yell-black); color:#fff; font-family:var(--font-display); font-weight:700; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:6px 14px; border-radius:999px">Phase 2</span>
+            <span style="font-family:var(--font-display); font-weight:700; font-size:18px">Build</span>
+            <span style="flex:1; height:1px; background:var(--yell-line)"></span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px">
+            <div data-anim="fade-up" data-anim-delay="1" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-black); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="04">04</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Validation</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Test the idea against real demand.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="2" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-black); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="05">05</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Sourcing</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Visit wholesale markets, negotiate stock.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="3" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-black); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="06">06</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Branding</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Name it, design it, make it real.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 3: SELL -->
+        <div style="margin-bottom:48px">
+          <div data-anim="fade-up" style="display:flex; align-items:center; gap:12px; margin-bottom:20px">
+            <span style="display:inline-block; background:var(--yell-red); color:#fff; font-family:var(--font-display); font-weight:700; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:6px 14px; border-radius:999px">Phase 3</span>
+            <span style="font-family:var(--font-display); font-weight:700; font-size:18px">Sell</span>
+            <span style="flex:1; height:1px; background:var(--yell-line)"></span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px">
+            <div data-anim="fade-up" data-anim-delay="1" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="07">07</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Go-to-market</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Build the store and the sales plan.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="2" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="08">08</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">The pop-up</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Sell to real customers, in person. This is the day.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="3" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="09">09</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Meta session</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Read your numbers, iterate.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PHASE 4: LAUNCH -->
+        <div>
+          <div data-anim="fade-up" style="display:flex; align-items:center; gap:12px; margin-bottom:20px">
+            <span style="display:inline-block; background:var(--yell-red); color:#fff; font-family:var(--font-display); font-weight:700; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; padding:6px 14px; border-radius:999px">Phase 4</span>
+            <span style="font-family:var(--font-display); font-weight:700; font-size:18px">Launch</span>
+            <span style="flex:1; height:1px; background:var(--yell-line)"></span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; max-width:800px">
+            <div data-anim="fade-up" data-anim-delay="1" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="10">10</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Pitch Day</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Pitch what you built to a panel of real operators and judges.</p>
+            </div>
+            <div data-anim="fade-up" data-anim-delay="2" data-timeline-card style="position:relative; background:var(--yell-linen); border:1px solid rgba(0,0,0,0.06); border-radius:14px; padding:24px; overflow:hidden">
+              <div style="position:absolute; top:0; left:0; width:4px; height:100%; background:var(--yell-red); border-radius:4px 0 0 4px"></div>
+              <span style="font-family:var(--font-display); font-weight:800; font-size:28px; color:var(--yell-red)" data-counter="11">11</span>
+              <h3 style="font-family:var(--font-display); font-weight:700; font-size:18px; margin:10px 0 6px">Report</h3>
+              <p style="font-size:14px; line-height:21px; color:var(--yell-ink-70); margin:0">Take home a printed Entrepreneurship Report on the business you ran.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4 MODULES EXPANDED (parallax) -->
+    <section class="modules-section" style="max-width:1200px; margin:0 auto; padding:80px 32px; overflow:hidden">
+      <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">The 4 modules</span>
+      <h2 style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; margin:12px 0 44px">What you learn — and what you actually do.</h2>
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <article data-anim="fade-up" data-anim-delay="1" data-parallax="0.08" style="display:grid; grid-template-columns:80px 1fr 1fr; gap:28px; align-items:start; border:1px solid var(--yell-line); border-radius:12px; padding:32px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:40px; line-height:1; color:var(--yell-red)" data-counter="01">01</span>
+          <div><h3 style="font-family:var(--font-display); font-weight:700; font-size:22px; margin:0 0 8px">Business Foundation &amp; Market Discovery</h3><p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Frameworks for spotting a real opportunity, sizing demand, and choosing what to sell.</p></div>
+          <div data-parallax="0.12" style="background:var(--yell-chalk); border-radius:10px; padding:18px 20px"><span style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">In the field</span><p style="font-size:15px; line-height:22px; color:var(--yell-black); margin:6px 0 0">A market visit to Sadar Bazaar / Chawri Bazaar to find products and read real demand.</p></div>
+        </article>
+        <article data-anim="fade-up" data-anim-delay="2" data-parallax="0.12" style="display:grid; grid-template-columns:80px 1fr 1fr; gap:28px; align-items:start; border:1px solid var(--yell-line); border-radius:12px; padding:32px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:40px; line-height:1; color:var(--yell-red)" data-counter="02">02</span>
+          <div><h3 style="font-family:var(--font-display); font-weight:700; font-size:22px; margin:0 0 8px">Branding, AI Tools &amp; Negotiation</h3><p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Turn a product into a brand, use AI to move faster, and negotiate like a buyer.</p></div>
+          <div data-parallax="0.16" style="background:var(--yell-chalk); border-radius:10px; padding:18px 20px"><span style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">In the field</span><p style="font-size:15px; line-height:22px; color:var(--yell-black); margin:6px 0 0">Negotiate live with wholesale vendors and lock your unit economics.</p></div>
+        </article>
+        <article data-anim="fade-up" data-anim-delay="3" data-parallax="0.16" style="display:grid; grid-template-columns:80px 1fr 1fr; gap:28px; align-items:start; border:1px solid var(--yell-line); border-radius:12px; padding:32px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:40px; line-height:1; color:var(--yell-red)" data-counter="03">03</span>
+          <div><h3 style="font-family:var(--font-display); font-weight:700; font-size:22px; margin:0 0 8px">Digital Presence &amp; Sales Execution</h3><p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Stand up an online store, run the content, and drive traffic that converts.</p></div>
+          <div data-parallax="0.20" style="background:var(--yell-chalk); border-radius:10px; padding:18px 20px"><span style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">In the field</span><p style="font-size:15px; line-height:22px; color:var(--yell-black); margin:6px 0 0">Run a physical pop-up and an online store side by side.</p></div>
+        </article>
+        <article data-anim="fade-up" data-anim-delay="4" data-parallax="0.20" style="display:grid; grid-template-columns:80px 1fr 1fr; gap:28px; align-items:start; border:1px solid var(--yell-line); border-radius:12px; padding:32px">
+          <span style="font-family:var(--font-display); font-weight:800; font-size:40px; line-height:1; color:var(--yell-red)" data-counter="04">04</span>
+          <div><h3 style="font-family:var(--font-display); font-weight:700; font-size:22px; margin:0 0 8px">Pitching, Storytelling &amp; Demo Day</h3><p style="font-size:15px; line-height:23px; color:var(--yell-ink-70); margin:0">Shape the story of your venture and defend it in front of real judges.</p></div>
+          <div data-parallax="0.24" style="background:var(--yell-white); border-radius:10px; padding:18px 20px"><span style="font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">In the field</span><p style="font-size:15px; line-height:22px; color:var(--yell-black); margin:6px 0 0">Pitch on Demo Day to a panel including operators from boAt.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHAT YOU ACTUALLY DO — step cards with image placeholders -->
+    <section style="background:var(--yell-black)">
+      <div style="max-width:1200px; margin:0 auto; padding:80px 32px">
+        <div style="text-align:center; margin-bottom:56px">
+          <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-red)">No theory-only weeks</span>
+          <h2 style="font-family:var(--font-display); font-weight:700; font-size:40px; line-height:46px; letter-spacing:-0.01em; color:#fff; margin:12px 0 0">What you actually do.</h2>
+          <p style="font-size:17px; line-height:26px; color:rgba(255,255,255,0.5); margin:12px auto 0; max-width:520px">Seven steps from idea to revenue. Every week you ship something real.</p>
+        </div>
+
+        <!-- Step 1 -->
+        <div data-anim="fade-up" data-anim-delay="1" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:16px; overflow:hidden; margin-bottom:20px">
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&q=80" alt="Choosing products to sell" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 01</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Choose your product</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Pick a product you believe in and build an entire business around it.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div data-anim="fade-up" data-anim-delay="2" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:16px; overflow:hidden; margin-bottom:20px">
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 02</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Source from wholesale markets</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Visit Sadar Bazaar and Chawri Bazaar. Walk the lanes. Find your supplier.</p>
+          </div>
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&h=400&fit=crop&q=80" alt="Wholesale market sourcing" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div data-anim="fade-up" data-anim-delay="3" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:16px; overflow:hidden; margin-bottom:20px">
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&q=80" alt="Negotiating with vendors" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 03</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Negotiate like a buyer</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Haggle on prices, lock unit economics, and learn margins the hard way.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div data-anim="fade-up" data-anim-delay="4" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:16px; overflow:hidden; margin-bottom:20px">
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 04</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Build your brand</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Name it. Design the logo. Create packaging. Make it look like it belongs on a shelf.</p>
+          </div>
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop&q=80" alt="Brand design and packaging" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div data-anim="fade-up" data-anim-delay="5" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:16px; overflow:hidden; margin-bottom:20px">
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop&q=80" alt="Setting up a store" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 05</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Launch your store</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Set up an online storefront and a physical pop-up — sell on both channels simultaneously.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div data-anim="fade-up" data-anim-delay="6" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid var(--yell-red); border-radius:16px; overflow:hidden; margin-bottom:20px; background:rgba(220,38,38,0.08)">
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 06</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Sell and keep the margin</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Real customers. Real transactions. Real revenue you take home.</p>
+          </div>
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=600&h=400&fit=crop&q=80" alt="Selling to real customers" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div data-anim="fade-up" data-anim-delay="7" data-step-card style="display:grid; grid-template-columns:1fr 1fr; gap:0; border:1px solid rgba(255,255,255,0.1); border-radius:16px; overflow:hidden; background:var(--yell-black)">
+          <div style="min-height:260px; overflow:hidden">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop&q=80" alt="Pitching on Demo Day" style="width:100%; height:100%; object-fit:cover; display:block">
+          </div>
+          <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center">
+            <span style="font-family:var(--font-display); font-weight:800; font-size:14px; color:var(--yell-red); letter-spacing:0.06em">STEP 07</span>
+            <h3 style="font-family:var(--font-display); font-weight:700; font-size:24px; color:#fff; margin:8px 0 10px">Pitch on Demo Day</h3>
+            <p style="font-size:15px; line-height:24px; color:rgba(255,255,255,0.65); margin:0">Present your venture to a panel of real operators and judges. Defend every decision you made.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMAT + CERTIFICATION -->
+    <section style="max-width:1200px; margin:0 auto; padding:80px 32px; display:grid; grid-template-columns:1fr 1fr; gap:24px">
+      <div style="border:1px solid var(--yell-line); border-radius:12px; padding:36px">
+        <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">Format &amp; commitment</span>
+        <h2 style="font-family:var(--font-display); font-weight:700; font-size:26px; line-height:32px; margin:12px 0 16px">Hybrid - built around a student's week.</h2>
+        <ul style="margin:0 0 20px; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px">
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</span>Weekday sessions run virtual.</li>
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</span>Weekends run on-ground across Delhi NCR.</li>
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</span>Duration varies by tier.</li>
+        </ul>
+        <a href="Pricing.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:16px; color:var(--yell-red); text-decoration:none">Compare tiers &amp; duration →</a>
+      </div>
+      <div style="background:var(--yell-chalk); border:1px solid var(--yell-line); border-radius:12px; padding:36px">
+        <span style="display:inline-block; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--yell-ink-45)">Certification &amp; recognition</span>
+        <h2 style="font-family:var(--font-display); font-weight:700; font-size:26px; line-height:32px; margin:12px 0 16px">Proof you did it.</h2>
+        <ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:12px">
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</span>Certificate of Completion.</li>
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</span>Demo Day awards - Top Brand, Best Team, Most Profitable Venture.</li>
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</span>A Young CEO feature.</li>
+          <li style="font-size:16px; line-height:24px; color:var(--yell-ink-70); padding-left:20px; position:relative"><span style="position:absolute; left:0; color:var(--yell-red)">•</spa
