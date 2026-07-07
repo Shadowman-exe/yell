@@ -166,6 +166,18 @@
 
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll, { passive: true });
+  // Resilience: if the document ever scrolls inside a container (e.g. the body
+  // becomes its own scroll box) rather than the window, the window 'scroll'
+  // event won't fire. A capture-phase document listener catches scroll from any
+  // scroller so reveal/parallax keep working regardless of the scroll root.
+  document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+
+  // Reveal in-view content immediately — don't wait for the first interval
+  // tick (up to 200ms of blank above-the-fold content on load).
+  scan();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scan);
+  }
 
   var scanCount = 0;
   var scanTimer = setInterval(function () {
