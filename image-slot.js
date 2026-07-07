@@ -237,14 +237,14 @@
       root.innerHTML =
         '<style>' + stylesheet + '</style>' +
         '<div class="frame" part="frame">' +
-        '  <img part="image" alt="" draggable="false" style="display:none">' +
+        '  <img part="image" alt="" draggable="false" decoding="async" style="display:none">' +
         '  <div class="empty" part="empty">' + icon +
         '    <div class="cap"></div>' +
         '    <div class="sub">or <u>browse files</u></div></div>' +
         '  <div class="ring" part="ring"></div>' +
         '</div>' +
         '<div class="spill">' +
-        '  <img class="ghost" alt="" draggable="false">' +
+        '  <img class="ghost" alt="" draggable="false" decoding="async">' +
         '  <div class="handle" data-c="nw"></div><div class="handle" data-c="ne"></div>' +
         '  <div class="handle" data-c="sw"></div><div class="handle" data-c="se"></div>' +
         '</div>' +
@@ -624,6 +624,11 @@
         }
         this._img.style.display = 'block';
         this._empty.style.display = 'none';
+        // Hide the placeholder ring via shadow DOM directly (not only via the
+        // :host([data-filled]) rule) — the host attribute can be dropped by a
+        // host-framework hydration pass, which would leave the dashed ring
+        // drawn over a filled slot. The empty state is toggled the same way.
+        this._ring.style.display = 'none';
         this.setAttribute('data-filled', '');
         this._clampView();
         this._applyView();
@@ -632,6 +637,8 @@
         this._img.removeAttribute('src');
         this._ghost.removeAttribute('src');
         this._empty.style.display = 'flex';
+        // Restore the ring for the empty state (respecting mask, which hides it).
+        this._ring.style.display = this.getAttribute('mask') ? 'none' : '';
         this.removeAttribute('data-filled');
       }
     }
