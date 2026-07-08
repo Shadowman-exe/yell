@@ -27,10 +27,13 @@
 
   function revealCheck() {
     document.querySelectorAll('[data-anim]').forEach(function (el) {
-      if (revealed.has(el)) return;
+      // Idempotent reveal: the DC/React runtime can re-render a node and rewrite
+      // its class attribute, silently wiping 'is-visible' and leaving the element
+      // stuck at its initial opacity:0. Don't gate on a one-shot 'revealed' set —
+      // instead ensure any in-view element always carries the class, re-adding it
+      // if a re-render removed it.
       if (isInView(el)) {
-        revealed.add(el);
-        el.classList.add('is-visible');
+        if (!el.classList.contains('is-visible')) el.classList.add('is-visible');
       }
     });
     document.querySelectorAll('[data-counter]').forEach(function (el) {
@@ -186,10 +189,33 @@
     if (scanCount > 30) clearInterval(scanTimer);
   }, 200);
 
-  var mutObs = new MutationObserver(function () { scan(); });
+  // Debounced so the class re-adds this observer triggers can't cause a loop —
+  // mutations coalesce into a single rAF-batched scan that settles at a fixed point.
+  var obsTicking = false;
+  var mutObs = new MutationObserver(function () {
+    if (obsTicking) return;
+    obsTicking = true;
+    requestAnimationFrame(function () { obsTicking = false; scan(); });
+  });
   function startObserving() {
-    mutObs.observe(document.body, { childList: true, subtree: true });
+    // Observe the <html> root (survives a full <body> replacement by the React
+    // runtime) and watch class/style attributes so a re-render that wipes
+    // 'is-visible' is caught and the element is re-revealed.
+    mutObs.observe(document.documentElement, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['class', 'style']
+    });
   }
   if (document.body) startObserving();
   else document.addEventListener('DOMContentLoaded', startObserving);
+
+  // Reveal once more after full load and after React streaming typically settles,
+  // in case a late re-render landed between scans.
+  window.addEventListener('load', function () {
+    scan();
+    setTimeout(scan, 400);
+    setTimeout(scan, 1500);
+  });
 })();

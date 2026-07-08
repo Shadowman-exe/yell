@@ -770,9 +770,11 @@ a[style*="text-decoration: none"][style*="color: var(--yell-red)"] {
   image-slot[style*="height: 240px"] {
     height: 180px !important;
   }
-  /* CTA buttons full width on mobile */
-  div[style*="display: flex"][style*="gap: 14px"] > a,
-  div[style*="display: flex"][style*="gap: 12px"] > a {
+  /* CTA buttons full width on mobile — horizontal button rows only.
+     Exclude column layouts (e.g. the footer Contact list) so their links
+     aren't stretched and centre-aligned. */
+  div[style*="display: flex"][style*="gap: 14px"]:not([style*="flex-direction: column"]) > a,
+  div[style*="display: flex"][style*="gap: 12px"]:not([style*="flex-direction: column"]) > a {
     flex: 1 1 100% !important;
     text-align: center !important;
   }
