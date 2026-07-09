@@ -120,6 +120,9 @@ section[style*="background: var(--yell-red)"] a:hover,
 .yell-hover:hover p { color: rgba(255,255,255,0.75) !important; }
 .yell-hover:hover span[style*="color: var(--yell-ink-45)"],
 .yell-hover:hover span[style*="color: var(--yell-red)"] { color: var(--yell-red) !important; }
+/* Stat/metric numbers set in ink black (e.g. Proof brand-card margin) would vanish
+   on the black hover background — force them white. */
+.yell-hover:hover div[style*="color: var(--yell-black)"] { color: #fff !important; }
 
 /* ─── DARK CARD HOVER (already-dark cards) ─── */
 .yell-hover-dark {

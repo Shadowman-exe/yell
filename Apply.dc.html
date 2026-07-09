@@ -91,7 +91,7 @@
           <div style="display:flex; flex-direction:column; gap:7px">
             <label for="s-tier" style="font-size:14px; font-weight:600">Tier of interest</label>
             <select class="yfield" id="s-tier" name="tier" value="{{ tierValue }}" onChange="{{ onTierChange }}">
-              <option value="weekender">Weekender - ₹4,790 / weekend</option>
+              <option value="weekender">Weekender - ₹14,790 / weekend</option>
               <option value="bootcamp">Bootcamp - ₹1,49,997</option>
               <option value="launchpad">Launchpad - ₹2,29,999</option>
             </select>
@@ -383,4 +383,19 @@ class Component extends DCLogic {
       m2Display: (gm && mc >= 1) ? 'block' : 'none',
       m3Display: (gm && mc >= 2) ? 'block' : 'none',
       m4Display: (gm && mc >= 3) ? 'block' : 'none',
-      m5Display: (gm && mc
+      m5Display: (gm && mc >= 4) ? 'block' : 'none',
+      onTierChange: this.onTierChange,
+      sErr: sErr,
+      uErr: uErr,
+      sBorder: bMap(sErr, ['name','email','phone','city']),
+      uBorder: bMap(uErr, ['name','role','institution','email','phone']),
+      removeM2: () => this.removeMember(2),
+      removeM3: () => this.removeMember(3),
+      removeM4: () => this.removeMember(4),
+      removeM5: () => this.removeMember(5),
+    };
+  }
+}
+</script>
+</body>
+</html>
