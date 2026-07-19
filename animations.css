@@ -861,10 +861,9 @@ a[style*="text-decoration: none"][style*="color: var(--yell-red)"] {
   }
   /* 4-col grids fall to a single column (inherited from the 768px block).
      Only short-label tiles opt back into 2-up: Apply contact cards (gap 16px)
-     and the Universities name/stat cards (gap 18/28px). The Mentors core-team
-     cards are excluded — a 52px avatar plus a name in a ~163px column clips
-     longer names ("Catherine Kotsiopoulou") against the card edge. */
-  div[style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 18px"],
+     and the Universities stat cards (gap 28px). The Mentors core-team cards
+     are excluded — a 52px avatar plus a name in a ~163px column clips longer
+     names ("Catherine Kotsiopoulou") against the card edge. */
   div[style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 28px"],
   div[style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 16px"]:not(:has([data-mentor-card])) {
     grid-template-columns: repeat(2, 1fr) !important;
