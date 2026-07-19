@@ -674,6 +674,14 @@ a[style*="text-decoration: none"][style*="color: var(--yell-red)"] {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
+  /* Section wrappers are divs (max-width:1200px; padding:80px 32px) — the
+     section[...] vertical rules below never reach them, so they kept the full
+     desktop 80px top+bottom on a phone. */
+  div[style*="padding: 80px 32px"],
+  div[style*="padding: 72px 32px"] {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
   section[style*="padding: 24px 32px"],
   div[style*="padding: 20px 32px"],
   div[style*="padding: 12px 24px"] {
@@ -851,12 +859,25 @@ a[style*="text-decoration: none"][style*="color: var(--yell-red)"] {
   div[style*="padding: 28px 24px"] {
     padding: 22px 16px !important;
   }
-  /* Contact card grid on Apply page */
-  div[style*="grid-template-columns: repeat(4, 1fr)"] {
+  /* 4-col grids fall to a single column (inherited from the 768px block).
+     Only short-label tiles opt back into 2-up: Apply contact cards (gap 16px)
+     and the Universities name/stat cards (gap 18/28px). The Mentors core-team
+     cards are excluded — a 52px avatar plus a name in a ~163px column clips
+     longer names ("Catherine Kotsiopoulou") against the card edge. */
+  div[style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 18px"],
+  div[style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 28px"],
+  div[style*="grid-template-columns: repeat(4, 1fr)"][style*="gap: 16px"]:not(:has([data-mentor-card])) {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  /* Image slots full width safety */
-  image-slot {
+  /* Belt-and-braces: never let a long name push out of its card. */
+  [data-mentor-card] > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  /* Image slots full width safety. Circle/pill slots are excluded: they are
+     square avatars sized in px, and stretching them to 100% width makes the
+     50% border-radius render as an ellipse (see image-slot.js shape docs). */
+  image-slot:not([shape="circle"]):not([shape="pill"]) {
     width: 100% !important;
     height: auto !important;
     min-height: 180px;
