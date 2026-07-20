@@ -6,6 +6,20 @@
    parallax and the roadmap after the initial scan window. Body-only lets the
    clip propagate to the viewport while normal window scrolling keeps working. */
 body { overflow-x: hidden; }
+/* Nav desktop/mobile switch is CSS-only on purpose. It used to be driven by
+   window.innerWidth in Nav.dc.html's component state (seeded at 1200), so any
+   run where componentDidMount was late or skipped painted the 1200px-wide
+   desktop nav on a phone — inline display beats every rule below it, giving a
+   sideways-scrolling page with no burger. Media queries cannot fail to run. */
+.yell-nav-desktop { display: flex; }
+.yell-nav-burger { display: none; }
+.yell-nav-panel { display: none; }
+@media (max-width: 900px) {
+  .yell-nav-desktop { display: none; }
+  .yell-nav-burger { display: inline-flex; }
+  .yell-nav-panel.is-open { display: block; }
+}
+
 img { max-width: 100%; height: auto; }
 image-slot { max-width: 100%; }
 /* Prevent long numbers/text in stat counters from causing overflow */
