@@ -1,4 +1,14 @@
 {
+  "redirects": [
+    { "source": "/Home.dc.html", "destination": "/", "permanent": true },
+    { "source": "/Program.dc.html", "destination": "/program", "permanent": true },
+    { "source": "/Pricing.dc.html", "destination": "/pricing", "permanent": true },
+    { "source": "/Universities.dc.html", "destination": "/universities", "permanent": true },
+    { "source": "/Proof.dc.html", "destination": "/proof", "permanent": true },
+    { "source": "/Mentors.dc.html", "destination": "/mentors", "permanent": true },
+    { "source": "/About.dc.html", "destination": "/about", "permanent": true },
+    { "source": "/Apply.dc.html", "destination": "/apply", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/", "destination": "/Home.dc.html" },
     { "source": "/home", "destination": "/Home.dc.html" },

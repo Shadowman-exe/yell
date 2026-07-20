@@ -17,7 +17,7 @@
 </helmet>
 <header style="position:sticky; top:0; z-index:50; background:var(--yell-black); border-bottom:1px solid rgba(255,255,255,0.08)">
   <div style="max-width:1200px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px">
-    <a href="Home.dc.html" aria-label="YELL home" style="display:flex; align-items:center; flex:0 0 auto">
+    <a href="/" aria-label="YELL home" style="display:flex; align-items:center; flex:0 0 auto">
       <img src="assets/logo-yell-white.png" alt="YELL - Young Entrepreneurs Learning Labz" style="height:28px; width:auto; display:block">
     </a>
 
@@ -27,7 +27,7 @@
       </sc-for>
       <div style="display:flex; align-items:center; gap:10px; margin-left:8px">
         <a href="https://cal.com/e-bibil/15min" target="_blank" rel="noopener" style="font-family:var(--font-display); font-weight:700; font-size:15px; text-decoration:none; color:var(--yell-white); border:2px solid rgba(255,255,255,0.55); border-radius:8px; padding:9px 16px; line-height:1; white-space:nowrap">Book a call</a>
-        <a href="Apply.dc.html" style="font-family:var(--font-display); font-weight:700; font-size:15px; text-decoration:none; color:var(--yell-white); background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:9px 18px; line-height:1; white-space:nowrap">Apply now</a>
+        <a href="/apply" style="font-family:var(--font-display); font-weight:700; font-size:15px; text-decoration:none; color:var(--yell-white); background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:9px 18px; line-height:1; white-space:nowrap">Apply now</a>
       </div>
     </nav>
 
@@ -43,7 +43,7 @@
       </sc-for>
       <div style="display:flex; flex-direction:column; gap:10px; margin-top:14px">
         <a href="https://cal.com/e-bibil/15min" target="_blank" rel="noopener" style="text-align:center; font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-white); border:2px solid rgba(255,255,255,0.55); border-radius:8px; padding:13px 16px; line-height:1">Book a call</a>
-        <a href="Apply.dc.html" style="text-align:center; font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-white); background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:13px 16px; line-height:1">Apply now</a>
+        <a href="/apply" style="text-align:center; font-family:var(--font-display); font-weight:700; font-size:16px; text-decoration:none; color:var(--yell-white); background:var(--yell-red); border:2px solid var(--yell-red); border-radius:8px; padding:13px 16px; line-height:1">Apply now</a>
       </div>
     </div>
   </div>
@@ -64,12 +64,12 @@ class Component extends DCLogic {
   renderVals() {
     const active = this.props.active || '';
     const pages = [
-      { key: 'program', label: 'The Program', href: 'Program.dc.html' },
-      { key: 'pricing', label: 'Pricing', href: 'Pricing.dc.html' },
-      { key: 'universities', label: 'For Universities', href: 'Universities.dc.html' },
-      { key: 'proof', label: 'Proof', href: 'Proof.dc.html' },
-      { key: 'mentors', label: 'Mentors', href: 'Mentors.dc.html' },
-      { key: 'about', label: 'About', href: 'About.dc.html' },
+      { key: 'program', label: 'The Program', href: '/program' },
+      { key: 'pricing', label: 'Pricing', href: '/pricing' },
+      { key: 'universities', label: 'For Universities', href: '/universities' },
+      { key: 'proof', label: 'Proof', href: '/proof' },
+      { key: 'mentors', label: 'Mentors', href: '/mentors' },
+      { key: 'about', label: 'About', href: '/about' },
     ];
     const links = pages.map(p => {
       const on = p.key === active;

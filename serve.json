@@ -1,0 +1,13 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/Home.dc.html" },
+    { "source": "/home", "destination": "/Home.dc.html" },
+    { "source": "/program", "destination": "/Program.dc.html" },
+    { "source": "/pricing", "destination": "/Pricing.dc.html" },
+    { "source": "/universities", "destination": "/Universities.dc.html" },
+    { "source": "/proof", "destination": "/Proof.dc.html" },
+    { "source": "/mentors", "destination": "/Mentors.dc.html" },
+    { "source": "/about", "destination": "/About.dc.html" },
+    { "source": "/apply", "destination": "/Apply.dc.html" }
+  ]
+}
